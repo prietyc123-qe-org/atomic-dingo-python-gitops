@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: atomic-dingo-python
+  janus-idp.io/tekton: atomic-dingo-python
+  backstage.io/kubernetes-id: atomic-dingo-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: atomic-dingo-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
